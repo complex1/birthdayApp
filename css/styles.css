@@ -724,27 +724,62 @@ input {
   }
 
   .journey {
-    padding-inline: 14px;
+    padding-inline: 12px;
+  }
+
+  .journey-title {
+    font-size: 3.15rem;
+  }
+
+  .journey-lead {
+    font-size: 1.12rem;
   }
 
   .journey-track {
-    padding-left: 34px;
-    padding-right: 0;
+    padding: 8px 2px 12px;
   }
 
   .stop,
   .stop.square,
   .stop.wide {
-    width: 100%;
-    margin: 2.4rem 0;
+    width: 70%;
+    margin: 2.75rem 0;
   }
 
-  .journey-track .stop .knot,
-  .journey-track .stop.wide .knot {
-    left: -26px;
-    right: auto;
-    top: 20px;
+  .journey-track .stop:nth-of-type(odd),
+  .journey-track .stop.wide:nth-of-type(odd) {
     margin-left: 0;
+    margin-right: auto;
+  }
+
+  .journey-track .stop:nth-of-type(even),
+  .journey-track .stop.wide:nth-of-type(even) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .journey-track .stop:nth-of-type(odd) .knot,
+  .journey-track .stop.wide:nth-of-type(odd) .knot {
+    left: auto;
+    right: -7px;
+    top: 38%;
+    margin: 0;
+  }
+
+  .journey-track .stop:nth-of-type(even) .knot,
+  .journey-track .stop.wide:nth-of-type(even) .knot {
+    left: -7px;
+    right: auto;
+    top: 38%;
+    margin: 0;
+  }
+
+  .frame {
+    padding: 10px 10px 12px;
+  }
+
+  .frame p {
+    font-size: 1.12rem;
   }
 }
 

@@ -120,20 +120,26 @@
 
     if (!points.length) return null;
 
+    const narrow = window.matchMedia("(max-width: 640px)").matches;
+    const bulge = narrow ? Math.min(42, width * 0.11) : 28;
     let d = "M " + points[0].x.toFixed(1) + " " + points[0].y.toFixed(1);
+
     for (let i = 1; i < points.length; i += 1) {
       const previous = points[i - 1];
       const current = points[i];
-      const midY = (previous.y + current.y) / 2;
+      const goingRight = current.x >= previous.x;
+      const c1x = Math.max(6, Math.min(width - 6, previous.x + (goingRight ? -bulge : bulge)));
+      const c2x = Math.max(6, Math.min(width - 6, current.x + (goingRight ? bulge : -bulge)));
+      const dy = current.y - previous.y;
       d +=
         " C " +
-        previous.x.toFixed(1) +
+        c1x.toFixed(1) +
         " " +
-        midY.toFixed(1) +
+        (previous.y + dy * 0.42).toFixed(1) +
         ", " +
-        current.x.toFixed(1) +
+        c2x.toFixed(1) +
         " " +
-        midY.toFixed(1) +
+        (previous.y + dy * 0.58).toFixed(1) +
         ", " +
         current.x.toFixed(1) +
         " " +
