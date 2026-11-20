@@ -1,4 +1,8 @@
 (function () {
+  var OPENS_AT = Date.parse("2026-11-21T00:00:00+05:30");
+  var countdownTimer = 0;
+  var birthdayRevealed = false;
+
   const openButton = document.getElementById("openButton");
   const gate = document.getElementById("gate");
   const letter = document.getElementById("letter");
@@ -293,7 +297,74 @@
       );
   }
 
+  function pad(value) {
+    return value < 10 ? "0" + value : String(value);
+  }
+
+  function renderCountdown() {
+    var left = OPENS_AT - Date.now();
+    var clock = document.getElementById("clock");
+    var total = Math.max(0, Math.floor(left / 1000));
+    var days = Math.floor(total / 86400);
+    var hours = Math.floor((total % 86400) / 3600);
+    var minutes = Math.floor((total % 3600) / 60);
+    var seconds = total % 60;
+
+    document.getElementById("countDays").textContent = pad(days);
+    document.getElementById("countHours").textContent = pad(hours);
+    document.getElementById("countMinutes").textContent = pad(minutes);
+    document.getElementById("countSeconds").textContent = pad(seconds);
+    clock.classList.toggle("is-short", days === 0);
+    clock.setAttribute(
+      "aria-label",
+      (days ? days + " days, " : "") +
+        hours + " hours, " +
+        minutes + " minutes, " +
+        seconds + " seconds left"
+    );
+
+    if (left <= 0) {
+      window.clearInterval(countdownTimer);
+      revealBirthday();
+    }
+  }
+
+  function revealBirthday() {
+    if (birthdayRevealed) return;
+    birthdayRevealed = true;
+
+    var countdown = document.getElementById("countdown");
+    function showGate() {
+      document.documentElement.classList.remove("is-waiting");
+      intro();
+    }
+
+    if (window.gsap && !prefersReducedMotion()) {
+      gsap.to(countdown, {
+        autoAlpha: 0,
+        y: -18,
+        duration: 0.7,
+        ease: "power2.inOut",
+        onComplete: showGate,
+      });
+      return;
+    }
+
+    showGate();
+  }
+
+  function startCountdown() {
+    renderCountdown();
+    countdownTimer = window.setInterval(renderCountdown, 250);
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) renderCountdown();
+    });
+  }
+
   function intro() {
+    if (intro.started) return;
+    intro.started = true;
+
     if (!window.gsap || prefersReducedMotion()) {
       showStatically();
       return;
@@ -333,10 +404,18 @@
 
   openButton.addEventListener("click", openLetter);
 
-  if (document.readyState === "complete") {
+  function begin() {
+    if (Date.now() < OPENS_AT) {
+      startCountdown();
+      return;
+    }
     intro();
+  }
+
+  if (document.readyState === "complete") {
+    begin();
   } else {
-    window.addEventListener("load", intro);
+    window.addEventListener("load", begin);
   }
 
   window.setTimeout(function () {

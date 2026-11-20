@@ -194,6 +194,82 @@ input {
   min-height: 100dvh;
 }
 
+.countdown {
+  display: none;
+  min-height: 100dvh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:
+    max(28px, env(safe-area-inset-top))
+    20px
+    max(32px, env(safe-area-inset-bottom));
+  gap: 8px;
+}
+
+.is-waiting .countdown {
+  display: flex;
+}
+
+.is-waiting .gate {
+  display: none;
+}
+
+.countdown-name {
+  margin: 0;
+  font-family: "Great Vibes", "Snell Roundhand", "Segoe Script", cursive;
+  font-size: clamp(4.4rem, 18vw, 8rem);
+  font-weight: 400;
+  line-height: 0.9;
+  color: #f8edd9;
+  text-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.clock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0 6px;
+}
+
+.unit {
+  min-width: 68px;
+}
+
+.unit span {
+  display: block;
+  font-family: Cinzel, "Times New Roman", serif;
+  font-size: clamp(2.1rem, 9vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1;
+  color: #f8edd9;
+  font-variant-numeric: tabular-nums;
+}
+
+.unit small {
+  display: block;
+  margin-top: 8px;
+  font-family: Cinzel, "Times New Roman", serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.colon {
+  margin-top: 0.35rem;
+  font-family: Cinzel, "Times New Roman", serif;
+  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  color: var(--gold);
+}
+
+.clock.is-short #daysUnit,
+.clock.is-short #daysColon {
+  display: none;
+}
+
 .gate {
   min-height: 100dvh;
   display: flex;

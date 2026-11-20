@@ -16,6 +16,9 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' font-size='24'%3E♥%3C/text%3E%3C/svg%3E" />
     <script>
       document.documentElement.classList.add("js");
+      if (Date.now() < Date.parse("2026-11-21T00:00:00+05:30")) {
+        document.documentElement.classList.add("is-waiting");
+      }
     </script>
   </head>
   <body>
@@ -48,6 +51,34 @@
     </div>
 
     <main class="stage">
+      <section class="countdown" id="countdown" aria-labelledby="countdownTitle">
+        <p class="eyebrow">For you</p>
+        <h1 class="countdown-name" id="countdownTitle">Shweta</h1>
+        <p class="whisper">The letter opens at midnight</p>
+        <div class="clock" id="clock" role="timer" aria-live="off" aria-atomic="true" aria-label="Time left until midnight">
+          <div class="unit" id="daysUnit">
+            <span id="countDays">00</span>
+            <small>Days</small>
+          </div>
+          <span class="colon" id="daysColon" aria-hidden="true">:</span>
+          <div class="unit">
+            <span id="countHours">00</span>
+            <small>Hours</small>
+          </div>
+          <span class="colon" aria-hidden="true">:</span>
+          <div class="unit">
+            <span id="countMinutes">00</span>
+            <small>Minutes</small>
+          </div>
+          <span class="colon" aria-hidden="true">:</span>
+          <div class="unit">
+            <span id="countSeconds">00</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+        <p class="hint">21 November · 12:00</p>
+      </section>
+
       <section class="gate" id="gate">
         <p class="eyebrow intro-item">For you</p>
         <h1 class="name intro-item">Shweta</h1>
