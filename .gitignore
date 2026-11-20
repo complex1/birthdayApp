@@ -1,0 +1,4 @@
+.DS_Store
+# Full-size originals (HEIC/PNG/JPG). The site uses images/display/ only.
+images/*
+!images/display/

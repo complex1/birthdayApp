@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#140c0a" />
+    <title>For Shweta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' font-size='24'%3E♥%3C/text%3E%3C/svg%3E" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true">
+      <div class="dawn"></div>
+      <div class="vignette"></div>
+      <div class="embers">
+        <span style="--x: 6%; --d: 15s; --delay: -2s; --s: 3px"></span>
+        <span style="--x: 14%; --d: 18s; --delay: -9s; --s: 2px"></span>
+        <span style="--x: 22%; --d: 13s; --delay: -4s; --s: 4px"></span>
+        <span style="--x: 31%; --d: 20s; --delay: -12s; --s: 2px"></span>
+        <span style="--x: 40%; --d: 16s; --delay: -6s; --s: 3px"></span>
+        <span style="--x: 48%; --d: 19s; --delay: -1s; --s: 2px"></span>
+        <span style="--x: 57%; --d: 14s; --delay: -8s; --s: 3px"></span>
+        <span style="--x: 66%; --d: 17s; --delay: -3s; --s: 2px"></span>
+        <span style="--x: 74%; --d: 21s; --delay: -11s; --s: 4px"></span>
+        <span style="--x: 82%; --d: 15s; --delay: -7s; --s: 2px"></span>
+        <span style="--x: 90%; --d: 18s; --delay: -5s; --s: 3px"></span>
+        <span style="--x: 96%; --d: 13s; --delay: -10s; --s: 2px"></span>
+      </div>
+      <div class="candle candle-left">
+        <span class="flame"></span>
+        <span class="stick"></span>
+      </div>
+      <div class="candle candle-right">
+        <span class="flame"></span>
+        <span class="stick"></span>
+      </div>
+      <div class="grain"></div>
+    </div>
+
+    <main class="stage">
+      <section class="gate" id="gate">
+        <p class="eyebrow intro-item">For you</p>
+        <h1 class="name intro-item">Shweta</h1>
+        <p class="whisper intro-item">When you are ready, open this.</p>
+
+        <button
+          class="open-button intro-item"
+          id="openButton"
+          type="button"
+          aria-expanded="false"
+          aria-controls="letter"
+        >
+          <span class="sr-only">Open your birthday letter</span>
+          <span class="envelope" aria-hidden="true">
+            <span class="envelope-body"></span>
+            <span class="envelope-flap"></span>
+            <span class="wax"><span class="wax-letter">S</span></span>
+          </span>
+        </button>
+
+        <p class="hint intro-item">Tap the seal</p>
+      </section>
+
+      <!-- Edit the letter here. Change Shweta in the heading above too, and the S on the seal if you like. -->
+      <article class="letter" id="letter" aria-labelledby="letterTitle" aria-hidden="true">
+        <div class="paper">
+          <p class="ornament reveal" aria-hidden="true">✦</p>
+          <h2 class="greeting reveal" id="letterTitle" tabindex="-1">Happy Birthday</h2>
+          <p class="dear reveal">Shweta</p>
+          <p class="prose reveal">
+            I wanted the first thing you see today to be this: you are loved, quietly and completely.
+          </p>
+          <p class="prose reveal">
+            You make the ordinary feel like a place worth staying. The way you laugh, the way you care,
+            the calm you bring into a room — I notice it, and I am grateful for it every day.
+          </p>
+          <p class="prose reveal">
+            I hope this year is gentle with you. Slow mornings, good news, and a hundred small reasons
+            to smile. And I hope you never have to wonder how deeply you are cherished.
+          </p>
+          <p class="prose reveal">Happy birthday, my love.</p>
+          <div class="rule reveal" aria-hidden="true"><span>❦</span></div>
+          <p class="signoff reveal">Always yours</p>
+          <p class="love reveal">I love you</p>
+          <a class="more reveal" href="#journey">Our journey</a>
+        </div>
+      </article>
+
+      <!-- Photo order follows the file numbers. There is no image 8, so the path goes from 7 to 9. -->
+      <section class="journey" id="journey" aria-labelledby="journeyTitle">
+        <header class="journey-intro">
+          <p class="eyebrow">Our journey</p>
+          <h2 class="journey-title" id="journeyTitle">One after another</h2>
+          <p class="journey-lead">From the first picture, all the way here.</p>
+        </header>
+
+        <div class="journey-track">
+          <svg class="journey-line" aria-hidden="true">
+            <path class="line-guide"></path>
+            <path class="line-draw"></path>
+          </svg>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/1.jpg" width="1050" height="1400" alt="Shweta in a purple anarkali, standing with her husband in front of a painted restaurant wall" />
+              <figcaption>
+                <span class="stop-index">01</span>
+                <p>Side by side, in front of that painted wall</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop square">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/2.jpg" width="1400" height="1400" alt="Shweta in a pink dress holding a sun hat, standing with her husband at the sea" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">02</span>
+                <p>The sea, a pink dress, and your hat</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/3.jpg" width="1050" height="1400" alt="Shweta walking through a city plaza at night" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">03</span>
+                <p>You, under the city lights</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/4.jpg" width="1050" height="1400" alt="Shweta in a green saree, with her husband beside her at home" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">04</span>
+                <p>A green saree, and a quiet room</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop wide">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/5.jpg" width="1400" height="1050" alt="Shweta on a balcony, watching an orange sunset over the rooftops" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">05</span>
+                <p>Watching the sky turn gold</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/6.jpg" width="1050" height="1400" alt="Shweta and her husband seated under a Happy Anniversary balloon arch" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">06</span>
+                <p>Happy anniversary</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop wide">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/7.jpg" width="1400" height="1050" alt="A close portrait of Shweta and her husband laughing together" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">07</span>
+                <p>The laugh I look for</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/9.jpg" width="1050" height="1400" alt="Shweta resting her chin on her hand on a terrace at night" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">08</span>
+                <p>A night on the terrace</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/10.jpg" width="1050" height="1400" alt="Shweta and her husband standing with Pluto, a golden retriever, beside a Christmas tree" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">09</span>
+                <p>Christmas lights, with Pluto</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/11.jpg" width="1050" height="1400" alt="Shweta in a black dress standing with her husband under string lights" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">10</span>
+                <p>String lights above us</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/12.jpg" width="1050" height="1400" alt="Shweta sitting on a bench in the fog, with Pluto lying in front of her" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">11</span>
+                <p>Fog, a bench, and Pluto</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop wide">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/13.jpg" width="1400" height="1050" alt="Shweta smiling with a ukulele, surrounded by balloons, candles, and a small cake" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">12</span>
+                <p>A song, some candles, and your smile</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/14.jpg" width="1050" height="1400" alt="A close portrait of Shweta on a terrace in the evening, city lights behind her" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">13</span>
+                <p>Evening, and the city behind you</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/15.jpg" width="1050" height="1400" alt="Shweta and her husband sitting on a rock with Pluto between them" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">14</span>
+                <p>The three of us, on the rock</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/16.jpg" width="1050" height="1400" alt="Shweta in a red and gold saree, holding a Karwa Chauth thali with a lit diya" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">15</span>
+                <p>Karwa Chauth, the light in your hands</p>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="stop wide">
+            <span class="knot" aria-hidden="true"></span>
+            <figure class="frame">
+              <img src="images/display/17.jpg" width="1400" height="1050" alt="A night portrait of Shweta and her husband together" loading="lazy" />
+              <figcaption>
+                <span class="stop-index">16</span>
+                <p>Still us</p>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <p class="journey-close">And we are still walking.</p>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+      onerror="document.documentElement.classList.add('ready-static')"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
